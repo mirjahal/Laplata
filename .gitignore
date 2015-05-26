@@ -1,0 +1,9 @@
+/lumen.log
+/vendor
+.env
+
+.settings
+.buildpath
+.project
+
+composer.lock
