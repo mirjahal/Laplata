@@ -18,7 +18,9 @@ class AutenticacaoController extends Controller
 		$condicao = ['email' => $request->get('email'), 'password' => $request->get('senha'), 'status' => 'A'];
 		
 		if (Auth::attempt($condicao)) {
-			
+			return redirect('categoria');
 		}
+		
+		return redirect('/');
 	}
 }
