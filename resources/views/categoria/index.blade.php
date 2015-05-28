@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('template.page')
 
 @section('title', 'Categoria')
 
