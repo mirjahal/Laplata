@@ -27,7 +27,7 @@
 				<ul class="dropdown">
 					<li><a href="#">Perfil</a></li>
 					<li class="divider"></li>
-					<li><a href="#">Sair →</a></li>
+					<li><a href="autenticacao/logout">Sair →</a></li>
 				</ul>
 			</li>
 		</ul>
