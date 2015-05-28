@@ -16,6 +16,7 @@ $app->get('/', 'App\Http\Controllers\AutenticacaoController@index');
 $app->group(['prefix' => '/autenticacao'], function($app)
 {
 	$app->post('login', 'App\Http\Controllers\AutenticacaoController@login');
+	$app->get('logout', 'App\Http\Controllers\AutenticacaoController@logout');
 });
 
 $app->group(['prefix' => '/usuario'], function($app)
