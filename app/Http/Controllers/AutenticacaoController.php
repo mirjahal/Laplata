@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Usuario;
+use Carbon\Carbon;
 
 class AutenticacaoController extends Controller
 {
@@ -18,6 +20,10 @@ class AutenticacaoController extends Controller
 		$condicao = ['email' => $request->get('email'), 'password' => $request->get('senha'), 'status' => 'A'];
 		
 		if (Auth::attempt($condicao)) {
+		    $usuarioLogado = Auth::user();
+		    $usuarioLogado->data_ultimo_acesso = Carbon::now();
+		    $usuarioLogado->save();
+		    
 			return redirect('categoria');
 		}
 		
