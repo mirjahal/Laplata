@@ -11,7 +11,7 @@
 |
 */
 
-$app->get('/', 'App\Http\Controllers\AutenticacaoController@index');
+$app->get('/', 'AutenticacaoController@index');
 
 $app->group(['prefix' => '/autenticacao'], function($app)
 {
